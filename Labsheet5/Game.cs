@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labsheet5
 {
-    class Game
+    public abstract class Game
     {
         private readonly string _name;
         public string Name
@@ -35,11 +35,18 @@ namespace Labsheet5
         {
 
         }
+        public abstract void UpdatePrice(decimal percentageIncrease);
+        //{
+        //    Price *= (1 + percentageIncrease);
+        //}
+
 
         public override string ToString()
         {
             return string.Format($"{Name,-15}{Price,-15}{ReleaseDate,-15}");
         }
+
+    
      
     }
 }
