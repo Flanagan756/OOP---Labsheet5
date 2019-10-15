@@ -20,11 +20,14 @@ namespace Labsheet5
          // DisplayGame(g1);
          // DisplayGame(g2);
             DisplayGame(cg1);
+            Console.WriteLine(cg2.GetDiscountPrice()); //displays discounted price
             DisplayGame(cg2);
 
+            Console.WriteLine();
+            
             int result = 23.By2Less1();
             string text = "this is a test sentance";
-
+            string text2 = "this is a test sentance xdf dsfsfdf sdfsfsdf";
             Console.WriteLine("The number of words in \"{0}\" is {1}",text, text.WordCount());
 
             Console.WriteLine(result);

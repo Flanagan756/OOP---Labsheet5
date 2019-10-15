@@ -11,9 +11,9 @@ namespace Labsheet5
         public string PEGI_Rating { get; set; }
 
         public ComputerGame(string name, decimal price, DateTime date, string pegi)
-        : base(name, price, date)
+        : base(name, price, date) //connects to the other class which has these properties
         {
-            PEGI_Rating = pegi;
+            PEGI_Rating = pegi; //adds on its own property
         }
 
         public override string ToString()

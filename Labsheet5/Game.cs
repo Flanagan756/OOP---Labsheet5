@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Labsheet5
 {
-    public abstract class Game
+    public abstract /*abstract can't create constructors by child classes e.g computer games can use the properties when creating their own constructors*/ class Game
     {
-        private readonly string _name;
+        private readonly string _name; 
         public string Name
         {
             get
@@ -31,17 +31,17 @@ namespace Labsheet5
 
         }
 
-        public Game() : this("unkown", 0, DateTime.Now)
+        public Game() : this("unkown", 0, DateTime.Now) //defult const
         {
 
         }
-        public abstract void UpdatePrice(decimal percentageIncrease);
+        public abstract void UpdatePrice(decimal percentageIncrease); /*Uses this method but the method instructions itself are in ComputerGames.cs*/
         //{
         //    Price *= (1 + percentageIncrease);
         //}
 
 
-        public override string ToString()
+        public override string ToString() //ovverides any reference to the other method based on the current method below
         {
             return string.Format($"{Name,-15}{Price,-15}{ReleaseDate,-15}");
         }
